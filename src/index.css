@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500&display=swap');
+*{
+    scroll-behavior: smooth;
+    font-family: 'Poppins';
+}
+body {
+    @apply bg-blue-950 h-[100vh]
+}
