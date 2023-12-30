@@ -32,7 +32,7 @@ function ToDoList() {
   const toggleComplete = (id) => {
     setToDos(
       todos.map((todo) =>
-        todo.id   === id ? { ...todo, completed: !todo.completed } : todo
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
   };
@@ -46,7 +46,7 @@ function ToDoList() {
       return true;
     }
   });
-  
+
 
   return (
     <div className='container w-[50%] bg-gray-300 rounded-xl shadow-2xl text-center items-center p-8 mx-auto'>
@@ -75,7 +75,7 @@ function ToDoList() {
               className='text-xl mt-2 text-blue-800'
               onClick={() => toggleComplete(todo.id)}
             />
-            <TodoLabel todo={todo} toggleComplete={()=>{toggleComplete(todo.id)}} deleteTodo={() => handleDelete(todo.id)} />
+            <TodoLabel todo={todo} toggleComplete={() => { toggleComplete(todo.id) }} deleteTodo={() => handleDelete(todo.id)} />
           </div>
         ))}
       </section>
